@@ -1,3 +1,4 @@
+# Net Speed Simplified
 
 > Forked from : [biji/SimpleNetSpeed](https://github.com/biji/simplenetspeed)
 
