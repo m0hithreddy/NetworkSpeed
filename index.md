@@ -1,6 +1,8 @@
 
 > Forked from : [Simple Net speed](https://github.com/biji/simplenetspeed)
 
+> Github Link : [prateekmedia/netspeedsimplified/](https://github.com/prateekmedia/netspeedsimplified)
+
 ***Tested on GNOME 3.36 and 3.38***
 
 #### Changelog : 
