@@ -1,4 +1,4 @@
-# Net Speed Simplified
+<h1 align="center">Net Speed Simplified</h1>
 
 > Forked from : [biji/SimpleNetSpeed](https://github.com/biji/simplenetspeed)
 
@@ -18,10 +18,11 @@
 - Human readable stylesheet // used minimum width and removed repetitive codes
 - Used ES6 classes for less code and more efficent javascript
 - Right Click to toggle visibility of total data used //If you will Right click on 4th mode i.e. total speed mode then total speed counter will reset to 0 MB. 
-- If network is not connected, then after 12 sec display text "--" for 1st mode, "----" for 2nd mode, "------" for 3rd mode, "--------" for 4th mode, for fifth mode it will display total data used(MB), Normal Right click functionality will show total data used except in 5th mode    
+- If network is not connected, then after 12 sec display text "--" for 1st mode, "----" for 2nd mode, "------" for 3rd mode, "--------" for 4th mode, for fifth mode it will display total data used(MB), Normal Right click functionality will show total data used except in 5th mode  
+- Vertical Aligment for mode 3,4 for Dash to panel or Big Screen users. (Go to [vertical-align branch](https://github.com/prateekmedia/netspeedsimplified/tree/verticalalign) for it)  
 
 #### Todo : 
-- Vertical Aligment for mode 3,4 for Dash to panel or Big Screen users.
+*Nothing TODO*
 
 if you face any **issues** you can **[open pull request](https://github.com/prateekmedia/netspeedsimplified/pulls)** and can type your issue with images or error codes
 
