@@ -1,6 +1,6 @@
 <h1 align="center">Net Speed Simplified</h1>
 
-> Forked from : [biji/SimpleNetSpeed](https://github.com/biji/simplenetspeed)
+> Forked from : [biji.gnome/SimpleNetSpeed](https://github.com/biji/simplenetspeed)
 
 ***Tested on GNOME 3.36 and 3.38***
 
