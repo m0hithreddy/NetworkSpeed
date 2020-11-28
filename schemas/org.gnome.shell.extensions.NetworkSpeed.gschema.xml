@@ -34,10 +34,13 @@
         <range min="0" max="1" />
         <default>0</default>
       </key>
-      <key name="lockmouseactions" type="b">
+      <key name="reverseindicators" type="b">
         <default>false</default>
       </key>
-      <key name="reverseindicators" type="b">
+      <key name="autohide" type="b">
+        <default>false</default>
+      </key>
+      <key name="lockmouseactions" type="b">
         <default>false</default>
       </key>
       <key name="uscolor" type="s">

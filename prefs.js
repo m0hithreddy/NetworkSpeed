@@ -178,6 +178,10 @@ Prefs.prototype =
 	let hboxRevInd = newGtkBox();
 	vBoxAddTgglBtn(hboxRevInd, "Show Upload First", "reverseindicators", "Enabling it will reverse the upload and download speed indicators");
 
+  //AutoHide when there is no network activity
+  let hboxAutoHide = new newGtkBox();
+  vBoxAddTgglBtn(hboxAutoHide, "AutoHide", "autohide", "AutoHide the extension, when there is no network activity");
+
 	//For Lock Mouse Actions
 	let hboxLckMuseAct = newGtkBox();
 	vBoxAddTgglBtn(hboxLckMuseAct, "Lock Mouse Actions", "lockmouseactions", "Enabling it will Lock Mouse Actions");

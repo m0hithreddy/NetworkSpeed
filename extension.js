@@ -15,7 +15,7 @@ let settings, timeout,
   spaCe,
   lastCount = 0, lastSpeed = 0, lastCountUp = 0,
   resetNextCount=false, resetCount=0,
-  newLine, h=8, tTime=0;
+  newLine, idleCount=8, tTime=0;
 
 var extRaw;
 
@@ -31,6 +31,7 @@ function fetchSettings() {
         isVertical: settings.get_boolean('isvertical'),
         chooseIconSet: settings.get_int('chooseiconset'),
         revIndicator: settings.get_boolean('reverseindicators'),
+        autoHide: settings.get_boolean('autohide'),
         lckMuseAct: settings.get_boolean('lockmouseactions'),
         nsPos: settings.get_int('wpos'),
         nsPosAdv: settings.get_int('wposext'),
@@ -193,6 +194,11 @@ function initNs() {
     Main.panel.addToStatusArea(ButtonName, nsButton, nsPosAdv(), nsPos());
 }
 
+//Destory Ns
+function nsDestroy() {
+    nsButton != null ? (nsButton.destroy(), nsButton = null) : null;
+}
+
 // Mouse Event Handler
 var startTime = null, rClickCount = 0;
 
@@ -276,15 +282,30 @@ function parseStat() {
             resetCount = count;
         }
         
-        (speed || speedUp) ? h = 0 : h++
+        (speed || speedUp) ? idleCount = 0 :
+        idleCount <= 8 ? idleCount++ : null;
 
-        if(h<=8) {
+        if (idleCount <= 8) {
+            //If destroyed by autohide
+            nsButton == null ? initNs() : null;
+
+            //Update the Ns components
             updateNsLabels(DIcons(1) + " " + speedToString(speedUp),
             DIcons(0) + " " + speedToString(speed - speedUp),
             dot + " " + speedToString(speed),
             DIcons(2) + " " + speedToString(count - resetCount, 1));
         }
-        else updateNsLabels('--', '--', '--', DIcons(2) + " " + speedToString(count - resetCount, 1));
+        else {
+            if (crStng.autoHide) {
+                nsDestroy();
+            }
+            else {
+                //If destroyed by autohide
+                nsButton == null ? initNs() : null;
+
+                updateNsLabels('--', '--', '--', DIcons(2) + " " + speedToString(count - resetCount, 1));
+            }
+        }
 
         lastCount = count;
         lastCountUp = countUp;
@@ -295,7 +316,7 @@ function parseStat() {
             disable();
             enable();
         }
-    } catch (e) {
+    } catch (e) {   //For developers
         usLabel.set_text(e.message);
         dsLabel.set_text(e.message);
         tsLabel.set_text(e.message);
@@ -319,6 +340,5 @@ function enable() {
 
 function disable() {
     Mainloop.source_remove(timeout);
-    nsButton.destroy();
-    nsButton = null;
+    nsButton != null ? (nsButton.destroy(), nsButton = null) : null;
 }
