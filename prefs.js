@@ -3,7 +3,7 @@ const Gtk = imports.gi.Gtk,
 
 const Me = imports.misc.extensionUtils.getCurrentExtension(),
   Convenience = Me.imports.convenience,
-  schema = "org.gnome.shell.extensions.netspeedsimplified";
+  schema = "org.gnome.shell.extensions.NetworkSpeed";
 
 function init(){}
 

@@ -1,6 +1,6 @@
 {
-  "description": "Fork of Simple Net speed by bijignome \n\nTested on gnome 3.36 and 3.38\n\n+ Added Preference Menu with option to change refresh rate and more\n+ Now if you change something from preferences it will apply in real time.\n\nWhats New:\n  Clean UI, Changeable refresh time, Fix repetitive code in stylesheet.css, \nRight Click to view total downloaded data in bits and bytes, Lesser Code Better Code,\n new Sigma and Up and down Arrow icons, dynamic width,\n used kb/s instead of Kbps, added spaces where needed,\n If you don't have active net connection for 12 seconds then this extension will show '--' instead of 0 B/s,\n Added vertical align support for dash to panel or big screen users(to use it just right click 4 time continuously on any mode to toggle vertical align), \nAdded old icons from simplenetspeed extension(to use it go to preferences and toggle Use old icons) and more coming\n\nLeft Click To change modes.\n\nModes Available:\n1. Total net speed in bits per second\n2. Total net speed in Bytes per second\n3. Up and down speed in bits per second\n4. Up and down speed in Bytes per second\n5. Total of downloaded in Bytes (Right click to reset counter\n\nRight Click To toggle visibility of Total Up and Down or Reset counter for 5th mode.\n\nRight Click four times continuously to toggle Vertical alignment\n\nMiddle Click to change font size.",
-  "name": "Net speed Simplified",
+  "description": "Highly customizable Network Speed Monitor.\n\nQuick install: \n\n/bin/bash -c \"$(curl -sL https://git.io/JkFoh)\"\n\nWhats in this extension:\n\n* Preference Menu to customize the extension.\n* Five configurable network speed modes.\n  1. Total net speed in [g, m, k]b/s.\n  2. Total net speed in [G, M, K]B/s.\n  3. Up and down speed in [g, m, k]b/s.\n  4. Up and down speed in [G, M, K]B/s.\n  5. Total Downloaded in [G, M, K]B.\n* Extension color can be customizable.\n* Option to show upload speed first in the modes 3 and 4.\n* Align the extension horizantally or vertically.\n* Different font sizes.\n\nMouse click events on the extension:\n\n* Left click: Cycle through the modes.\n* Right click in the first four modes: Toggle the visibility of total downloaded.\n* Right click in the fifth mode: Reset total downloaded.\n* Four consecutive right clicks: Toggle the horizantal/vertical alignment.\n* Middle click: Cycle through the font sizes.\n\nThanks to bijignome of creating the extension. Special thanks to prateekmedia for giving rebirth to the extension.\n\nWhat I added:\n\n* Revamping the whole codebase to create roadmap for many feature additions.\n* Color customizations.\n* Show upload speed first.\n* Adopted Make build system to manage the extension (for developers).\n* Quick install method.\n",
+  "name": "Network Speed",
   "shell-version": [
     "3.14",
     "3.15",
@@ -24,7 +24,7 @@
     "3.36",
     "3.38"
   ],
-  "url": "https://github.com/prateekmedia/netspeedsimplified",
-  "uuid": "netspeedsimplified@prateekmedia.extension",
-  "version": 20
+  "url": "https://github.com/m0hithreddy/NetworkSpeed",
+  "uuid": "NetworkSpeed@m0hithreddy",
+  "version": 1
 }

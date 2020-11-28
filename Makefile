@@ -1,4 +1,4 @@
-EXT_HOME=~/.local/share/gnome-shell/extensions/netspeedsimplified@prateekmedia.extension
+EXT_HOME=~/.local/share/gnome-shell/extensions/NetworkSpeed@m0hithreddy
 
 all: install
 
@@ -15,14 +15,13 @@ install: convenience.js extension.js metadata.json prefs.js stylesheet.css schem
 	cp LICENSE ${EXT_HOME} 2>/dev/null || true
 	cp README.md ${EXT_HOME} 2>/dev/null || true
 	cp screenshoot.png ${EXT_HOME} 2>/dev/null || true
-	cp schemas/org.gnome.shell.extensions.netspeedsimplified.gschema.xml ${EXT_HOME}/schemas 2>/dev/null || true
+	cp schemas/org.gnome.shell.extensions.NetworkSpeed.gschema.xml ${EXT_HOME}/schemas 2>/dev/null || true
 
 	#Reloading shell; Sending SIGHUP signal to gnome-shell (equivalent to alt + f2 ; r ; enter)
 	busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting…")'
 
 	#Enabling Gnome extension.
-	gnome-extensions enable netspeedsimplified@prateekmedia.extension
-
+	gnome-extensions enable NetworkSpeed@m0hithreddy
 remove:
 	rm -rf ${EXT_HOME}
 

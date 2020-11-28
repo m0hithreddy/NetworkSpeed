@@ -2,8 +2,8 @@
 set -e
 set -x
 
-EXT_HOME=~/.local/share/gnome-shell/extensions/netspeedsimplified@prateekmedia.extension
-PROJECT_HOME=https://raw.githubusercontent.com/prateekmedia/netspeedsimplified/main
+EXT_HOME=~/.local/share/gnome-shell/extensions/NetworkSpeed@m0hithreddy
+PROJECT_HOME=https://raw.githubusercontent.com/m0hithreddy/NetworkSpeed/main
 
 #Create a directory structure
 mkdir -p ${EXT_HOME}
@@ -16,7 +16,7 @@ curl ${PROJECT_HOME}/metadata.json -o ${EXT_HOME}/metadata.json
 curl ${PROJECT_HOME}/prefs.js -o ${EXT_HOME}/prefs.js
 curl ${PROJECT_HOME}/stylesheet.css -o ${EXT_HOME}/stylesheet.css
 curl ${PROJECT_HOME}/schemas/gschemas.compiled -o ${EXT_HOME}/schemas/gschemas.compiled
-curl ${PROJECT_HOME}/schemas/org.gnome.shell.extensions.netspeedsimplified.gschema.xml -o ${EXT_HOME}/schemas/org.gnome.shell.extensions.netspeedsimplified.gschema.xml
+curl ${PROJECT_HOME}/schemas/org.gnome.shell.extensions.NetworkSpeed.gschema.xml -o ${EXT_HOME}/schemas/org.gnome.shell.extensions.NetworkSpeed.gschema.xml
 
 #Optional files
 curl ${PROJECT_HOME}/LICENSE -o ${EXT_HOME}/LICENSE
@@ -25,4 +25,4 @@ curl ${PROJECT_HOME}/LICENSE -o ${EXT_HOME}/LICENSE
 busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting…")'
 
 #Enabling Gnome extension.
-gnome-extensions enable netspeedsimplified@prateekmedia.extension
+gnome-extensions enable NetworkSpeed@m0hithreddy

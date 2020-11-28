@@ -7,7 +7,7 @@ const Clutter = imports.gi.Clutter,
  Mainloop = imports.mainloop,
  Me = imports.misc.extensionUtils.getCurrentExtension(),
  Convenience = Me.imports.convenience,
- schema = 'org.gnome.shell.extensions.netspeedsimplified',
+ schema = 'org.gnome.shell.extensions.NetworkSpeed',
  ButtonName = "ShowNetSpeedButton",
  rCConst=4; //Right Click 4 times to toggle Vertical Alignment
 
