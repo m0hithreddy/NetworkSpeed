@@ -183,22 +183,6 @@ Prefs.prototype =
 	vBoxAddTgglBtn(hboxLckMuseAct, "Lock Mouse Actions", "lockmouseactions", "Enabling it will Lock Mouse Actions");
 
   //Colors
-	let hboxColor = newGtkBox();
-	function onColorToggle(widget){
-	  	if (widget){
-  		usColorButton.show();
- 		dsColorButton.show();
- 		tsColorButton.show();
- 		tdColorButton.show();
-  	} else {
-  		usColorButton.hide();
- 		dsColorButton.hide();
- 		tsColorButton.hide();
- 		tdColorButton.hide();
-  	}
-  }
-  
-	vBoxAddTgglBtn(hboxColor, "Show Color Customization", "colortggle", "Enabling it will Show all Color customizations", onColorToggle);
 
 	//Upload Speed Color 
 	let usColorButton = newGtkBox();
@@ -220,7 +204,6 @@ Prefs.prototype =
 	frame.add(vbox);
 	frame.add(mfooter);
 	frame.show_all();
-	onColorToggle(thset.get_boolean("colortggle"));
 
 	return frame;
   }
