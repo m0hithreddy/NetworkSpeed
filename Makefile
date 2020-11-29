@@ -32,3 +32,7 @@ remove-no-reboot:
 	rm -rf ${EXT_HOME}
 
 reinstall: remove-no-reboot install
+
+extension: 
+	rm -f NetworkSpeed.zip
+	zip -r NetworkSpeed.zip *
